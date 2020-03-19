@@ -1,0 +1,226 @@
+\PassOptionsToPackage{table}{xcolor}
+\documentclass{article}
+% \documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage{pgfgantt}
+\usepackage{todonotes}
+\usepackage[icelandic,UKenglish]{babel}
+\usepackage[UKenglish]{datetime}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+\usepackage[gen]{eurosym}
+\usepackage{multicol}
+\graphicspath{ {./images/} }
+\usepackage[titletoc,title]{appendix}
+\usepackage{pdfpages}
+
+\fancypagestyle{plain}{ %
+  \fancyhf{} % remove everything
+  \renewcommand{\headrulewidth}{0pt} % remove lines as well
+  \renewcommand{\footrulewidth}{0pt}
+}
+% \setlength{\topskip}{0mm}
+\setlength{\headheight}{15pt}
+% \setlength{\topmargin}{-5.4mm}
+% \setlength{\textheight}{230mm}
+\setlength{\textwidth}{180mm}
+\setlength{\oddsidemargin}{-5.0mm}
+% \setlength{\evensidemargin}{10.0mm}
+% \setlength{\captionmargin}{7mm}
+
+% \newcounter{sectocnonumdepth}
+% \setcounter{sectocnonumdepth}{0}
+
+\title{NeIC Final Report Template}
+\author{bianco.giovanni }
+\date{March 2020}
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width=\textwidth]{neic_logo_large.png}
+\end{center}
+
+\vspace{0.5in}
+{\Huge <PROJECT> Final Report} \hline
+\vspace{0.5in}
+
+\noindent
+{\large
+{The report is drawn-up in agreement between NeIC as the project owner represented by <PROJECT OWNER> and the <PROJECT >. It is verified through a steering group decision.
+}
+}
+
+\begin{center}
+% \rowcolors{2}{gray!25}{white}
+\rowcolors{2}{white}{gray!25}
+\begin{tabular}{|l| l| l| l|} \hline
+
+& Name
+& Partner/Activity
+& Date \\ \hline
+From & 
+ &
+& 
+\\ \hline
+Reviewed by &
+& 
+& 
+\\ \hline
+Approved by &
+& 
+& 
+\\ \hline
+\end{tabular}
+\end{center}
+
+Edition history
+
+\begin{center}
+\rowcolors{2}{gray!25}{white}
+\begin{tabular}{|l| l| l| l|} \hline
+Issue
+& Date
+& Comment
+& Author/Partner \\ \hline
+From & 
+John White &
+& 
+\\ \hline
+Reviewed by &
+& 
+& 
+\\ \hline
+Approved by &
+& 
+& 
+\\ \hline
+\end{tabular}
+\end{center}
+
+Abstract:
+
+{\it Abstract goes here.}
+
+\begin{center}
+\rowcolors{2}{gray!25}{white}
+\begin{tabular}{|l| l| l|} \hline
+\multicolumn{3}{|c|}{\bf Comprehensive information about the project} \\ \hline
+\bf Type of Project: & \multicolumn{2}{|c|}{\bf } \\ \hline
+\bf Scope & \bf Result & \\ \cline{2-3}
+      & \bf Time & \\ \cline{2-3}
+      & \bf Cost & \\ \hline
+\bf Documentation & \multicolumn{2}{|l|}{\bf Internal: } \\
+\bf Location & \multicolumn{2}{|l|}{\bf External: } \\ \hline
+\end{tabular}
+\end{center}
+{\it Specify the type of project (prestudy, development project, delivery project, etc.). Describe the scope of the project in the form of the result (what has been delivered), the duration of the project, and also the total cost. Also specify where the project documentation is stored.}
+
+
+% \maketitle
+% set up a title page here following the docs template...
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Basic Information}
+
+\subsection{The project}
+{\it Briefly describe the project background, possibly also its history. Also specify if it is an individual project, part of a NeIC strategic area or related to other projects. Describe cooperation with the national e-infrastructure providers. If applicable, also describe interactions with other stakeholders of NeIC; research communities, researchers, etc}
+
+\subsection{Background and Business Case}
+{\it Describe the expected strategic result (compare also to the initial project idea).}
+
+\subsection{Summary}
+{\it Assess how successful the project has been and summarise the most important experiences that are described later in this final report.}
+
+\section{Achievement of Objective}
+
+\subsection{Result, delivery objects}
+
+{\it Report the benefit that has been achieved and how it complies with the project objective. Report the actual outcome versus the agreed result and comment on any deviations. Also comment on initial benefit analysis and the forecast that additional benefits may occur after the project has been concluded.}
+
+\subsection{Result, delivery objects}
+{\it Report the benefit that has been achieved and how it complies with the project objective.
+Report the actual outcome versus the agreed result and comment on any deviations. Also comment on initial benefit analysis and the forecast that additional benefits may occur after the project has been concluded.}
+
+\subsection{Time}
+{\it Report the actual outcome versus the agreed project schedule and comment on any deviations.}
+
+\subsection{Cost}
+{\it Report the actual outcome versus the agreed project budget and comment on any deviations. You can typically refer to detailed tables in the appendix.}
+\section{Project Execution}
+{\it Summarise the course of events in the project. Describe how well the project followed the project schedule and the chosen production strategy. Explain any important events that decisively affected the course of events.}
+
+\section{Recommendations}
+
+{\it List proposals for improvements based on the experience learnt by everyone during the course of the project. Use the headlines in the project plan objectives section as a checklist  for the areas to be improved. Describe any deviations with concrete improvement proposals.}
+
+\section{Transferral of Results}
+
+{\it Describe the content of the transferrals of responsibility for results that the project made. Specify who approved the transferrals and when}
+
+\section{Collected Experiences}
+
+\subsection{The project participants’ experiences}
+{\it Present the project members’ view of the project. What is considered to have worked well or less well, along with any comments. It is  recommended to carry out regular activities and experience seminars in order to gather the project members’ views regarding the work involved in the project}
+
+\subsection{The steering group’s assessment}
+{\it Present the steering group’s view of the project. What is considered to have worked well or less well, along with any comments.  A survey form that measures customer satisfaction can be used here, attached as an appendix. The ”Customer survey” PPS template can be used.}
+
+\subsection{The reference group’s (use cases) assessment}
+{\it Present the reference group’s view of the project. What is considered to have worked well or less well, along with any comments.  Alternatively survey forms (e.g. ”Customer survey” PPS template) that measures customer satisfaction can be used here.}
+
+\section{Other}
+
+{\it Feel free to add additional needed structure adapted to the project.}
+
+\newpage
+{\it Refer to any additional information and especially deliverables and reports related to the project (press releases, contributions to other reports, own deliverables).}
+\bibliography{main}{}
+\bibliographystyle{unsrt}
+
+\newpage
+\begin{appendices}
+\section{PPS Terminology}
+
+\subsection{Decision points}
+During the lifespan of the project from startup to termination, a number of formal decisions must be made by the steering group. These fall into eight different types; which are numbered in the chronological order in which they are typically made.
+\begin{itemize}
+
+\item DP1 – Decision point type 1; steering group decision to start the project, based on the project directive.
+
+\item DP2 – Decision point type 2; steering group decision to continue, change or interrupt the project based on findings during the preparation phase. A project may have multiple DP2.
+
+\item DP3 – Decision point type 3; steering group decision to approve the project plan developed during the preparation phase. Typically this is tied to a DP4 decision to start the execution phase.
+
+\item DP4 – Decision point type 4; steering group decision to start the execution phase.
+
+\item DP5 – Decision point type 5; steering group decision to continue, change or interrupt the project based on findings during the execution phase. A project may have multiple DP5.
+
+\item DP6 – Decision point type 6; steering group decision to approve the result of a delivery, for example to end users. A project may have multiple DP6.
+
+\item DP7 – Decision point type 7; steering group decision to transfer the responsibility for a delivery, typically to operations in a receiving organization.
+
+\item DP8 – Decision point type 8; steering group decision to approve the final report and terminate the project.
+
+\end{itemize}
+
+\section{Glossary}
+
+\begin{tabular}{l|l|l}
+Term & Meaning & Comment/Link \\ \hline
+ & &  \\ \hline
+\end{tabular}
+
+\end{appendices}
+
+\end{document}
