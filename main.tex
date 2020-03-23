@@ -38,9 +38,13 @@
 % \newcounter{sectocnonumdepth}
 % \setcounter{sectocnonumdepth}{0}
 
-\title{NeIC Final Report Template}
-\author{bianco.giovanni }
-\date{March 2020}
+\newcommand{\dell}{Dellingr\xspace}
+\newcommand{\einfra}{e-infrastructure\xspace}
+\newcommand{\Lin}{LINPACK\xspace}
+\newcommand\EatDot[1]{}
+\newcommand{\np}{national provider\xspace}
+\newcommand{\nps}{\np{s}\xspace}
+\newcommand{\coreh}{core-hours\xspace}
 
 \begin{document}
 
@@ -49,12 +53,13 @@
 \end{center}
 
 \vspace{0.5in}
-{\Huge <PROJECT> Final Report} \hline
+{\Huge  \dell Final Report} \hline
 \vspace{0.5in}
 
 \noindent
 {\large
-{The report is drawn-up in agreement between NeIC as the project owner represented by <PROJECT OWNER> and the <PROJECT >. It is verified through a steering group decision.
+{The report is drawn-up in agreement between NeIC as the project owner represented by Tomasz Malkiewicz and the project manager John White. 
+It is verified through a steering group decision.
 }
 }
 
@@ -81,7 +86,7 @@ Approved by &
 \end{tabular}
 \end{center}
 
-Edition history
+{\bf \large Edition history:}
 
 \begin{center}
 \rowcolors{2}{gray!25}{white}
@@ -105,27 +110,26 @@ Approved by &
 \end{tabular}
 \end{center}
 
-Abstract:
-
-{\it Abstract goes here.}
+{\bf \large Abstract:}
+\noindent
+{The report summarizes the achievements of the \dell project in relation to the objective. Also  experiences and recommendations for improving working methods for future projects are given.}
 
 \begin{center}
 \rowcolors{2}{gray!25}{white}
 \begin{tabular}{|l| l| l|} \hline
 \multicolumn{3}{|c|}{\bf Comprehensive information about the project} \\ \hline
-\bf Type of Project: & \multicolumn{2}{|c|}{\bf } \\ \hline
-\bf Scope & \bf Result & \\ \cline{2-3}
-      & \bf Time & \\ \cline{2-3}
-      & \bf Cost & \\ \hline
-\bf Documentation & \multicolumn{2}{|l|}{\bf Internal: } \\
-\bf Location & \multicolumn{2}{|l|}{\bf External: } \\ \hline
+\bf Type of Project: & \multicolumn{2}{|c|}{Collaboration project} \\ \hline
+\bf Scope & \bf Result & 0.6 \\ \cline{2-3}
+      & \bf Time & 0.3 \\ \cline{2-3}
+      & \bf Cost & 0.1 \\ \hline
+\bf Documentation & \multicolumn{2}{|l|}{\bf Internal: {\url{https://wiki.neic.no/int/Dellingr}}} \\
+\bf Location & 
+\multicolumn{2}{|l|}
+{\bf External: {\url{https://wiki.neic.no/wiki/Dellingr
+}}} \\ \hline
 \end{tabular}
 \end{center}
-{\it Specify the type of project (prestudy, development project, delivery project, etc.). Describe the scope of the project in the form of the result (what has been delivered), the duration of the project, and also the total cost. Also specify where the project documentation is stored.}
-
-
-% \maketitle
-% set up a title page here following the docs template...
+% {\it Specify the type of project (prestudy, development project, delivery project, etc.). Describe the scope of the project in the form of the result (what has been delivered), the duration of the project, and also the total cost. Also specify where the project documentation is stored.}
 
 \newpage
 \tableofcontents
@@ -134,36 +138,246 @@ Abstract:
 \section{Basic Information}
 
 \subsection{The project}
-{\it Briefly describe the project background, possibly also its history. Also specify if it is an individual project, part of a NeIC strategic area or related to other projects. Describe cooperation with the national e-infrastructure providers. If applicable, also describe interactions with other stakeholders of NeIC; research communities, researchers, etc}
+% {\it Briefly describe the project background, possibly also its history. Also specify if it is an individual project, part of a NeIC strategic area or related to other projects. Describe cooperation with the national e-infrastructure providers. If applicable, also describe interactions with other stakeholders of NeIC; research communities, researchers, etc}
+
+The \dell project was instigated by the NeIC board in 2014 based on the observation that researchers are increasingly using sophisticated computational and data analysis systems to address research problems.
+
+As a result, research collaborations are evolving and expanding to include the wider range of fields and domains necessary to consider these problems at different scales, with more integrated approaches and in larger scientific and societal contexts. Consequently, long-term access to well supported computational and associated data analysis systems is fundamental to the success of the research endeavours. However, the sophistication of the systems has moved in new directions with the growth (and divergence) of HPC, cloud computing, data intensive computing and as well as citizen science. The increasing sophistication of systems bring out additional considerations in terms of costs, time frames and user support.
+
+The exploration of a coordinated long term Nordic e-infrastructure approach that makes computational, data and user support readily available to all Nordic researchers in all fields reflects the growing reality for research projects in the context of international collaborations, programs, and international competition. An effort focused on HPC and related aspects complements these efforts and is consistent with strategic directions in the Nordic region as embodied in the Nordic e-Science Action Plan:
+\begin{itemize}
+\item Action 6: Nordic Sharing and Exchange of e-Infrastructure Resources
+\item Action 8: Nordic High Performance Computing Collaboration.
+\end{itemize}
+
+This is also embodied in the NeIC Strategy Implementation Plan 2016-2020, which has Share Resources as one of the four focus areas. E-infrastructure resources can be hardware (CPU cycles, storage), software, services, or human resources. 
+
+It was seen that a framework for sharing hardware resources is necessary for pursuing collaboration opportunities, including HPC, data storage and cloud initiatives. 
+Important elements include federated authentication, authorisation and accounting, as well as harmonizing procedures in compliance with national rules and regulations. 
+One of the strong motivations on the part of the national providers is to more fully understand the opportunities for their national researchers to have un-disrupted access to high quality computational resources during transition periods between systems and architectures. 
+Another motivation to share resources is to open new research opportunities by allowing users to access resources with characteristics (hardware, software,support) that cannot be found in their home countries.
+
 
 \subsection{Background and Business Case}
-{\it Describe the expected strategic result (compare also to the initial project idea).}
+% {\it Describe the expected strategic result (compare also to the initial project idea).}
+\label{ssec:background}
+
+The strategic result of the \dell project was encapsulated 
+in the sentence for the project idea as ``Nordic e-infrastructure providers will more effectively support researchers to access a range of computational
+resources within the region by improving resource utilization and user access to computational resources.''
+The result of the project is a set of e-infrastructure policies, common processes and an associated framework that forms a Nordic platform for providing services to share resources in an effective and consistent manner.
+This was to be achieved through a set of objectives.
+The objectives of the project can be summarized as: \\
+
+{\bf Phase 1:}
+\begin{enumerate}
+\item Determine the availability of excess node hours to be exchanged during phase 2;
+\item Determine any constraints (e.g. national rules and regulations) that can affect the resource exchange;
+\item Determine if there are technical obstacles preventing such a resource exchange.
+\end{enumerate}
+
+{\bf Phase 2:}
+\begin{enumerate}
+\item Policies are developed and implemented to support sharing, in the Nordic countries, of HPC computational resources and other critical resources and competencies (e.g. local support);
+\item Resource exchange mechanisms are defined and agreed to by the participating national providers;
+\item Continue to use the approved methods for monitoring and tracking usage that have been implemented. Also use the processes for supporting research users that are in place for shared resources;
+\item Research users are fully and fairly informed about access policies and mechanisms for shared resources and have equitable 
+access to shared resources.
+\end{enumerate}
+
+There was also the establishment of high-level information exchange mechanism.
+A forum for the exchange of planning information for resources to be available in the Nordics was established.
+This forum, consisting of higher-level administrative members of national e-infra providers, gathered information on:
+\begin{enumerate}
+\item national e-infra priority roadmaps;
+\item resources available to share and not to share in the future;
+\item explore possibility of saving costs;
+\item exchange the experiences from the procurement and deployment projects;
+\item looking into synergies and what differentiates the countries.
+\end{enumerate}
 
 \subsection{Summary}
 {\it Assess how successful the project has been and summarise the most important experiences that are described later in this final report.}
 
+The \dell project was conceived so that Nordic e-infrastructure providers will be able to more effectively support researchers to access a range of computational resources within the region.
+This was to be achieved by improving resource utilization and user access to computational resources.
+
+The project included activities in policy discussions, administrative processes, legal topics, technical development and resource-sharing pilots.
+Overall, the \dell project was successful to establish that e-infra resource sharing is possible once a sharing policy was found that
+respected the various national procedures.
+The pilot resource-sharing pilots showed that researchers are interested to use e-infra resources when they are interesting to use and easy to access.
+
+
 \section{Achievement of Objective}
-
-\subsection{Result, delivery objects}
-
-{\it Report the benefit that has been achieved and how it complies with the project objective. Report the actual outcome versus the agreed result and comment on any deviations. Also comment on initial benefit analysis and the forecast that additional benefits may occur after the project has been concluded.}
 
 \subsection{Result, delivery objects}
 {\it Report the benefit that has been achieved and how it complies with the project objective.
 Report the actual outcome versus the agreed result and comment on any deviations. Also comment on initial benefit analysis and the forecast that additional benefits may occur after the project has been concluded.}
 
+The main results of the \dell project were seen to be a set of e-infrastructure policies, common processes and associated framework that would form a Nordic platform for providing services to share resources in an effective and consistent manner.
+These results are made visible and useable through the deployment of the resource-sharing framework as used in the second pilot.
+
+This framework operates a common process that is defined by a set of resource-sharing policies
+that conform to all the national policies of the participating countries.
+This framework provides a Nordic platform that provides services to share resources
+in a consistent manner.
+
+The outcomes of the \dell project are described in more detail in the 13 (Phase 1 and 2) Deliverable reports
+that have been produced by the project.
+These are available from the public project web site.
+The quality and content of these documents has been reviewed and approved by the Steering group when they have approved the deliverables.
+
 \subsection{Time}
 {\it Report the actual outcome versus the agreed project schedule and comment on any deviations.}
 
+The NeIC project portfolio reports are made quarterly.
+The \dell project mostly adhered to the project plan schedule.
+Minor delays have occurred in launching the two pilot mainly when software development, configuration and testing  have been required.
+As reported in the NeIC quarterly board reports, the \dell project has had "yellow" (Satisfactory, some concerns, potentially damaging)
+status in the time reporting only at the start of the project phase 2 as partners decided to join.
+Otherwise, the reporting showed that deliverables were achieved on-time, modulo changes to the schedule agreed by the Steering Group.
+
 \subsection{Cost}
 {\it Report the actual outcome versus the agreed project budget and comment on any deviations. You can typically refer to detailed tables in the appendix.}
+
+Also within the quarterly NeIC project portfolio reports are the costs reports.
+The costs for the \dell project did not deviate from the planned budget.
+As reported in the NeIC quarterly board reports, the \dell project had "yellow" (Satisfactory, some concerns, potentially damaging)
+status in the costs reporting only at the start of the project phase 2 as the the participation of staff from one partner
+took some time to identify.
+Otherwise, the reporting showed that costs did not have any issues over the project lifetime.
+
 \section{Project Execution}
 {\it Summarise the course of events in the project. Describe how well the project followed the project schedule and the chosen production strategy. Explain any important events that decisively affected the course of events.}
 
+The \dell project, as a project to study and initiate e-infrastructure resource sharing, included tasks on national and e-infrastructure centre policies, pilot resource-sharing schemes, technical development and legal topics.
+
+For legal issues such as VAT on resources shared across borders, external experts were consulted as well as the in-house legal
+counsels of the national e-infrastructure providers.
+These opinions and findings are reported in the Deliverables.
+A practical approach was used to select the framework for the resource-sharing.
+The framework selected was the one that has a developer as a member of the project.
+This situation greatly aided the technical development.
+
+Project execution was organised through the Deliverables that were defined within the project.
+The Deliverables were started as early as possible and each had a defined owner and a target date.
+As the Deliverables required input from distinct national e-infrastructures, the material was contributed from all project members.
+Follow-up of the Deliverables was tracked in the weekly project meetings.
+
+The \dell project did not require specific face-to-face meetings but used the NeIC All-Hands meetings and the NeIC conferences
+to co-locate for these type of meetings.
+The main meeting schedule was the weekly online team meetings discussing the Deliverables and other running topics of the project.
+The minutes of all the project group are published on the \dell project internal wiki page.
+
+The steering group of the project consisted of representatives of the partners, i.e. NeIC and the five participating national providers
+(DK,EST,FI,IS,SE) with Norway as an observer.
+The steering group had meetings roughly spaced by three months with at least one annually physically and others online.
+All steering group minutes have been published on the project public web site.
+
+There were no important external events that affected the course of the project.
+With the technical development of the framework effectively in-house and the participation
+of all members of the project group, the schedule was followed.
+Inevitably, with technical development, there were some delays due to testing of features but
+the Steering Group approved the changes to the schedule.
+
 \section{Recommendations}
 
-{\it List proposals for improvements based on the experience learnt by everyone during the course of the project. Use the headlines in the project plan objectives section as a checklist  for the areas to be improved. Describe any deviations with concrete improvement proposals.}
+{\it List proposals for improvements based on the experience learnt by everyone during the course of the project. Use the headlines in the project plan objectives section as a checklist for the areas to be improved. Describe any deviations with concrete improvement proposals.}
 
+
+The objectives of the \dell project are given in Section~\ref{ssec:background}.
+
+\begin{enumerate}
+\item {\it Policies are developed and implemented to support sharing, in the Nordic countries, of HPC computational resources and other critical resources and competencies (e.g. local support);}\\
+{
+The sharing policies of each participating partner have been discussed and presented in~\cite{dellingr-p2-do5}.
+A resource sharing policy is proposed that is agreeable to all participating partners.
+Regarding this objective, an improvement may be made in the future implementation of this policy that is currently agreed on a temporary basis.
+}
+
+\item {\it Resource exchange mechanisms are defined and agreed to by the participating national providers;}
+\item Continue to use the approved methods for monitoring and tracking usage that have been implemented. Also use the processes for supporting research users that are in place for shared resources;
+\item Research users are fully and fairly informed about access policies and mechanisms for shared resources and have equitable 
+access to shared resources.
+\end{enumerate}
+
+\subsection{Denmark}
+
+The pilot projects run in the \dell project have shown that from a technical perspective it is possible to share resources between Nordic researches and super computing facilities. 
+The configuration and operation of super computers are very similar, and users can move between facilities with a minor amount of work.
+
+The main obstacles to share resources at a larger scale are political. Many resources cannot be shared outside the country, and some resources in Denmark can only be shared if paid for. 
+
+\subsection{Estonia}
+
+Activities of \dell project have made us ask tricky questions about services ETAIS partners were offering. In particular:
+\begin{itemize}
+\item What exactly constitutes a service? 
+\item How we define affiliation and responsibility for a service?
+\item Is there a difference when we offer services locally in one organisation vs on the country level vs cross-border?
+\item Are there common patterns we can use and apply to all?
+\item How do we account for usage and set quotas for services if classical models (e.g. cpu/h) do not reflect cost of service operations adequately?
+\item How do we promote usage of our services inside the country and especially across the borders?
+\item How do we actually track what impact services had? How do we provide feedback to services?
+\end{itemize}
+
+During the project, we faced these question, because these are real problems if we would like to offer services cross-border. 
+We started to find good answers and this meant a lot more work for personnel. We will continue to standardise services on organisational level, this will help service provider to offer service not only in one organisation and country, but cross-border as well. 
+Then, we're trying to measure services impact, we analyse methods and ways how to do that. 
+This is important for Estonian funding agencies and service providers to find out if this particular service is necessary and used or not. 
+
+\subsection{Finland}
+
+The \dell project has been technically successful although some delays have been experienced in answering some requests. 
+The way of delivering these requests would have to be developed further if a continuous service would be put up. 
+The project has also shown that no technical barriers exist.
+
+The more severe barriers are on the political level. 
+In Finland, the decisions on available resources are easy in principle but it is not the case in all countries. 
+Also the legal and fiscal (VAT) problems should be solved on a higher level.
+
+All in all, the collaboration has been good and easy with the other centers and the project group. 
+
+\subsection{Iceland}
+
+The \dell project has shown that sharing HPC resources between countries is technically possible.
+
+Legal issues regarding VAT were complicated and unclear how to solve them. 
+A report regarding VAT sharing HPC between Meteorological Offices in Sweden, Finland, Denmark, Norway and Iceland was used to see if it could make things clear. 
+The report proved not to be sufficient in our case. 
+The lawyers at the University of Iceland (UI) were contacted but they could not help with this issue and recommended that a company that specializes in that filed would do this (KPMG). 
+So for all future projects where legal issues come up then contacting lawyers as soon as possible is the right thing to do so answers about the matter can be handled correctly from the beginning.
+
+Several questions from users were discussed and answered on FAQ page are very useful and will be helpful to set up policies for the HPC clusters that are in operation at the UI. 
+This has also shown the importance of having a visible board of directors that can answer those questions on behalf of Iceland. 
+A board like this could also be helpful to work on a road map for HPC.
+
+While the \dell project has been running there have been some changes of staff in HPC at the University of Iceland which also show us that running the system with only one member of staff in a part time job has been too difficult.
+
+\dell has also shown that when legal issues come up, then this has to be clear that lawyers are needed and legal issues can and should not be solved by system administrators. 
+Hopefully this can be made more clear in the future where to send legal issues on behalf of projects running under NeIC.
+
+Pushing information to potential users of the \dell project was not clear how to do. 
+The division of marketing and public relations was contacted regarding the matter and it was discussed but needed further discussion so they could not help in this case. 
+Everybody though agreed that this needed to be more clear but has not been pushed forward within the division of marketing and public relations. 
+
+\subsection{Sweden}
+
+In the \dell project it was shown that providing HPC-resources to users outside of the country in which the resource is located is technically possible, but that the legal, economic, and political hurdles can be difficult to overcome. 
+Technically most of the resources are set up in a similar fashion, the differences between the systems are most often minor and experienced users quickly find their way on a new resource. 
+
+The bigger obstacles in setting up a resource sharing framework lie more in the non-technical issues. 
+It is for example unclear how the economic transaction of exchanging core-hours across borders should be taxed. 
+The conclusion was that VAT likely shall have to be payed on the value of the provided computing time, one problem in this is that it is quite difficult to get a monetary value affixed to the intangible resource that is computing time. 
+
+There is also a legal problem in how these computing resources can be used by researcher not affiliated to a Swedish university. 
+Resources at Swedish universities, paid for by the Swedish government, by law are only intended for Swedish researchers. 
+This can be circumvented somewhat by having a principal investigator (PI) heading the project who is also a Swedish researcher. 
+But the case of having a project run by and for a group solely consisting of non-Swedish researchers can only be done as an exception and not as a permanent service. 
+
+Politically the willingness of sharing resources mostly is expressed in words rather than in action. 
+There is absolutely a sentiment that cross-border sharing of resources are a good thing, for example as in the case of the MAX-IV facility but only as case-by-case exceptions. 
+There has to be made a stronger case for the sharing of resources by lobbying the political levels. 
 \section{Transferral of Results}
 
 {\it Describe the content of the transferrals of responsibility for results that the project made. Specify who approved the transferrals and when}
